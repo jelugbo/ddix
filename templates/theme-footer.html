@@ -1,0 +1,153 @@
+## mako
+<%! 
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from edxmako.shortcuts import marketing_link
+%>
+<%namespace name='static' file='/static_content.html'/>
+<div class="wrapper-footer" style="display: none;">
+  <footer>
+    <div class="colophon">
+      <nav class="nav-colophon">
+        <ol>
+          <li><a href="${reverse('tos')}">${_('Terms of Service')} <br />(${_('Revised 06/14/14')})</a></li>
+          <li><a href="${reverse('tos')}#privacy">${_('Privacy Policy')} <br />(${_('Revised 06/14/14')})</a></li>
+          <li><a href="${reverse('tos')}#honor">${_('Honor Code')}</a></li>
+          <li><a href="${reverse('tos')}#copyright">${_('Copyright')}</a></li>
+          <li><a href="${reverse('about_edx')}#careers">${_('Careers')}</a></li>
+          <li><a href="${reverse('about_edx')}#contact">${_('Contact')}</a></li>
+          <li><a href="https://stanfordonline.zendesk.com/hc">${_('Help')}</a></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="references">
+      <a id="stanford-footer-edx-image" href="http://openedx.org">
+        <span class="sr">${_('Powered by {platform_name}').format(platform_name='Open edX')}</span>
+      </a>
+    </div>
+  </footer>
+</div>
+<hr>
+<footer id="footer" class="clearfix region-footer" role="contentinfo" aria-label="Footer">
+  <div class="region-footer-columns region-container container">
+    <div class="region-container-inner">
+      <!-- regions: Footer first and Footer second -->
+      <div class="region region-footer-first">
+        <div class="region-inner clearfix">
+          <div class="region-container-inner">
+            <div id="block-block-4" class="block block-block block-disclosure copy-detail no-title">
+              
+              
+              <p>
+                <img alt="DDI" height="50" src="${static.url('themes/metrox/images/ddi_gray_logo2.png')}">
+                DDI offers interactive online classes for energy and oil & gas industry combining experiences and expertise from all over the world. We have courses ranging from Geology, Petroluem engineering, Business management, Information security and Technology. We empowers people for better future and corporate organization for better productivity.
+              </p>
+              <p class="copyright">
+                © 2014 DDI, all rights reserved.
+              </p>
+              
+              <ul class="menu">
+                <li>
+                  <a href="#">
+                    Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="region region-footer-second">
+        <div class="region-inner clearfix">
+          <div class="region-container-inner">
+            <nav id="block-menu-block-7" class="block block-menu-block" role="navigation">
+              
+              <h2 class="block-title">
+                About DDI
+              </h2>
+              
+              <div class="menu-block-wrapper menu-block-7 menu-name-menu-about-company-in-footer parent-mlid-0 menu-level-1">
+                <ul class="menu clearfix">
+                  <li class="first leaf menu-mlid-11301 menu-depth-1 menu-item-11301">
+                    <a href="#">
+                      About
+                    </a>
+                  </li>
+                  <li class="leaf menu-mlid-11306 menu-depth-1 menu-item-11306">
+                    <a href="#">
+                      News
+                    </a>
+                  </li>
+                  <li class="leaf menu-mlid-11311 menu-depth-1 menu-item-11311">
+                    <a href="#">
+                      Contact
+                    </a>
+                  </li>
+                  <li class="leaf menu-mlid-11711 menu-depth-1 menu-item-11711">
+                    <span class="separator">
+                      -
+                    </span>
+                  </li>
+                  <li class="leaf menu-mlid-11316 menu-depth-1 menu-item-11316">
+                    <a href="#">
+                      FAQs
+                    </a>
+                  </li>
+                  <li class="leaf menu-mlid-11321 menu-depth-1 menu-item-11321">
+                    <a href="#">
+                      Careers
+                    </a>
+                  </li>
+                  <li class="leaf menu-mlid-11716 menu-depth-1 menu-item-11716">
+                    <span class="separator">
+                      -
+                    </span>
+                  </li>
+                  <li class="leaf menu-mlid-11326 menu-depth-1 menu-item-11326">
+                    <a href="#" class="edx-bold">
+                      Partners
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+              
+            </nav>
+            <section id="block-menu-menu-social-menu" class="block block-menu nav block-menu-social" role="navigation">
+              
+              <h2 class="block-title">
+                Follow Us
+              </h2>
+              
+              <ul class="menu clearfix">
+                <li class="first leaf menu-depth-1 menu-item-8139">
+                  <a href="https://www.facebook.com/ddi" title="Facebook" class="menu_icon menu-8139 fa fa-facebook-square">
+                    Facebook
+                  </a>
+                </li>
+                <li class="leaf menu-depth-1 menu-item-8141">
+                  <a href="https://twitter.com/ddi" title="Twitter" class="menu_icon menu-8141 fa fa-twitter">
+                    Twitter
+                  </a>
+                </li>
+                <li class="leaf menu-depth-1 menu-item-8142">
+                  <a href="https://plus.google.com/ddi/" title="Google+" class="menu_icon menu-8142 fa fa-google-plus-square">
+                    Google+
+                  </a>
+                </li>
+                <li class="leaf menu-depth-1 menu-item-8140">
+                  <a href="http://www.linkedin.com/company/ddi" title="LinkedIn" class="menu_icon menu-8140 fa fa-linkedin-square">
+                    LinkedIn
+                  </a>
+                </li>
+                
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</footer>

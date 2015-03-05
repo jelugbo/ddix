@@ -1,0 +1,53 @@
+## mako
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+%>
+<%namespace name='static' file='/static_content.html'/>
+<%inherit file="/navigation.html"/>
+
+## Toss the Stanford brand bar on top of the page
+<%block name="navigation_top">
+  <div id="su-header" style="display: none;">
+    <div class="su-container">
+      <a href="http://www.livingwordchapel.org">
+        <img src="${static.url('themes/metrox/images/brandbar-ddi-logo.png')}" alt="DDI" width="152" height="23">
+      </a>
+    </div>
+  </div>
+</%block>
+
+## TODO: this will eventually be moved to the Sass
+<%block name="navigation_logo">
+  <img src="${static.url('themes/metrox/images/ddi_logo_2.png')}" height="55" alt="${_('{platform_name}, Courses List').format(platform_name='DDI')}" />
+</%block>
+
+## We don't want extra links inside the navigation dropdown
+<%block name="navigation_dropdown_menu_links" />
+
+## When unauthenticated, only show the about page link
+<%block name="navigation_global_links">
+  <li class="nav-global-01">
+    <a href="#">How it Works</a>
+  </li>
+   <li class="nav-global-02">
+    <a href="${marketing_link('COURSES')}">Courses</a>
+  </li>
+   <li class="nav-global-03">
+    <a href="#">Specializations</a>
+  </li>
+</%block>
+
+## When authenticated, show both the about page and find courses
+<%block name="navigation_global_links_authenticated">
+   <li class="nav-global-01">
+    <a href="#">How it Works</a>
+  </li>
+  <li class="nav-global-02">
+    <a href="#">${_('Find Courses')}</a>
+  </li>
+  <li class="nav-global-03">
+    <a href="#">Specializations</a>
+  </li>
+</%block>
+
